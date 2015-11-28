@@ -11,7 +11,9 @@ class UserFacebookStuff(models.Model):
 
     def get_graph_api(self):
         """Return Facebook Graph API object initialized with user's token"""
-        return OpenFacebook(self.token)
+        return OpenFacebook(self.access_token)
 
-
+    def get_friends(self):
+        #TODO
+        pass
 
