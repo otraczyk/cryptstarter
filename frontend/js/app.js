@@ -1,6 +1,6 @@
 'use strict';
 
-var cryptStarterApp = angular.module('cryptStarter.app', ['ui.router']).config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+var cryptStarterApp = angular.module('cryptStarter.app', ['ui.router', 'satellizer']).config(['$stateProvider', '$urlRouterProvider', '$authProvider', function ($stateProvider, $urlRouterProvider, $authProvider) {
   $urlRouterProvider.otherwise('/');
   $stateProvider.state('landingPageState', {
     url: '/',
@@ -17,5 +17,9 @@ var cryptStarterApp = angular.module('cryptStarter.app', ['ui.router']).config([
     templateUrl: 'partials/contactsTpl.html',
     controller: 'contactsController',
     controllerAs: 'CC'
+  });
+
+  $authProvider.facebook({
+    clientId: '1194316053918870'
   });
 }]);

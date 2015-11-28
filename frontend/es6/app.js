@@ -1,9 +1,11 @@
 
 let cryptStarterApp = angular.module('cryptStarter.app', [
-  'ui.router'])
+  'ui.router',
+  'satellizer'])
   .config(['$stateProvider',
            '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+           '$authProvider',
+    function($stateProvider, $urlRouterProvider, $authProvider) {
       $urlRouterProvider.otherwise('/');
       $stateProvider
         .state('landingPageState', {
@@ -24,4 +26,11 @@ let cryptStarterApp = angular.module('cryptStarter.app', [
           controller: 'contactsController',
           controllerAs: 'CC'
         })
+
+      $authProvider.facebook({
+        clientId: '1194316053918870'
+      });
+
+      $authProvider.loginUrl = '/api/auth';
+
   }]);
