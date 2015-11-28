@@ -13,5 +13,10 @@
     "gulp-babel": "^6.1.1",
     "gulp-plumber": "^1.0.1",
     "gulp-serve": "^1.2.0"
+  },
+  "dependencies": {
+    "angular": "^1.4.8",
+    "bootstrap": "^3.3.6",
+    "ui-router": "^0.2.15"
   }
 }

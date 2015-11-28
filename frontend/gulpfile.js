@@ -3,7 +3,7 @@ var babel = require('gulp-babel');
 var serve = require('gulp-serve');
 var plumber = require('gulp-plumber');
 
-var ES6_SOURCE = 'es6/**/*';
+var ES6_SOURCE = 'es6/**/*.js';
 var JS_TARGET = 'js';
 
 gulp.task('js', function () {
