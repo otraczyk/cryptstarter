@@ -19,7 +19,7 @@ gulp.task('watch', function () {
 
 gulp.task('serve', serve({
   root: '.',
-  port: 8000
+  port: 8080
 }))
 
 gulp.task('default', ['js', 'serve', 'watch'])
