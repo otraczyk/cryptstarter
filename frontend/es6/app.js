@@ -28,7 +28,8 @@ let cryptStarterApp = angular.module('cryptStarter.app', [
         })
 
       $authProvider.facebook({
-        clientId: '1194316053918870'
+        clientId: '1194316053918870',
+        url: '/api/auth'
       });
 
       $authProvider.loginUrl = '/api/auth';
