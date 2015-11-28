@@ -37,8 +37,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,6 +45,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_facebook',
+    'django_extensions',
+    'users',
+    'pubkeys',
 )
 
 MIDDLEWARE_CLASSES = (
