@@ -56,3 +56,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Facebook app id & secret
+backend/backend/secret_settings.py
